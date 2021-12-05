@@ -1,0 +1,7 @@
+{
+    "statusCode": 200,
+    "timestamp": null,
+    "path": "/logout",
+    "message": "User logged out successfully",
+    "responseCode": "LOGGED_OUT"
+}
