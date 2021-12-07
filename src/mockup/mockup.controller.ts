@@ -26,13 +26,13 @@ export class MockupController {
             return this.mockupService.logoutMockup(mockupLogoutModel)
     }
 
-    @Get('/orders/:shop_id/:banking_date')
+    @Get('order/orderlist/:shop_id/:banking_date')
     getOrderList(@Param('shop_id' )shop_id:number,@Param('banking_date') banking_date : Date):any{
        console.log(shop_id,"/"+banking_date)
         return this.mockupService.getOrderListByShopidAndBankingDate();
     }
     
-    @Put('orders/status')
+    @Put('order/statusupdate')
     updateStatus(@Body()req:StatusRequestModel){
         console.log('update status create##',req)
          return this.mockupService.updateOrderStatus(req)
