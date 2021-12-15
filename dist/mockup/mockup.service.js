@@ -12,6 +12,7 @@ const loginresponsemodel = require("./json/loginresponsemodel.json");
 const logoutresponsemodel = require("./json/logoutresponsemodel.json");
 const orderlistmodel = require("./json/orderlistmodel.json");
 const statusresponsemodel_1 = require("./model/statusresponsemodel");
+const itemlistmodel = require("./json/itemlistmodel.json");
 let MockupService = class MockupService {
     constructor() {
         this.mockup = [];
@@ -45,6 +46,11 @@ let MockupService = class MockupService {
     logoutMockup(mockupLogoutModel) {
         console.log(logoutresponsemodel);
         return logoutresponsemodel;
+    }
+    getAllItems(shop_id) {
+        var orderdate = new Date();
+        console.log(orderdate);
+        return itemlistmodel;
     }
 };
 MockupService = __decorate([

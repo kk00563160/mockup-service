@@ -39,6 +39,10 @@ let MockupController = class MockupController {
         console.log('update status create##', req);
         return this.mockupService.updateOrderStatus(req);
     }
+    getItems(shop_id) {
+        console.log('get all items for shopid ', shop_id);
+        return this.mockupService.getAllItems(shop_id);
+    }
 };
 __decorate([
     (0, common_1.Get)(),
@@ -75,6 +79,13 @@ __decorate([
     __metadata("design:paramtypes", [statusrequestmodel_1.StatusRequestModel]),
     __metadata("design:returntype", void 0)
 ], MockupController.prototype, "updateStatus", null);
+__decorate([
+    (0, common_1.Get)('/goods/:shop_id'),
+    __param(0, (0, common_1.Param)('shop_id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], MockupController.prototype, "getItems", null);
 MockupController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [mockup_service_1.MockupService])

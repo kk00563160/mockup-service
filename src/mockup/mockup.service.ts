@@ -6,6 +6,7 @@ import * as loginresponsemodel from "./json/loginresponsemodel.json";
 import * as logoutresponsemodel from "./json/logoutresponsemodel.json"
 import * as orderlistmodel from "./json/orderlistmodel.json"
 import { StatusResponseModel } from './model/statusresponsemodel';
+import * as itemlistmodel from "./json/itemlistmodel.json"
 
 @Injectable()
 export class MockupService {
@@ -53,5 +54,12 @@ console.log(logoutresponsemodel)
       
     return logoutresponsemodel
     
+    }
+
+    getAllItems(shop_id : number){
+    var orderdate = new Date()
+
+    console.log(orderdate)
+    return itemlistmodel;
     }
 }

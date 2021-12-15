@@ -38,5 +38,11 @@ export class MockupController {
          return this.mockupService.updateOrderStatus(req)
     }
 
+    @Get('/goods/:shop_id')
+    getItems(@Param('shop_id')shop_id : number){
+        console.log('get all items for shopid ',shop_id)
+return this.mockupService.getAllItems(shop_id)
+    }
+
     }
 
