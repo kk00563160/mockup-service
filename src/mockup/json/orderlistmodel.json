@@ -1,56 +1,94 @@
 [
-    {
-        "delivery_date": "2021-12-02",
-        "amf_fl": 10,
-        "amk_kl": 50,
-        "allocated": null,
-        "total": 60,
-        "orders": [
-            {
-                "order_id": "102",
-                "amf_fl": 10,
-                "amk_kl": 50,
-                "allocated": null,
-                "total": 60,
-                "status": 3,
-                "accepted_by": "swati"
-            }
-        ]
-    },
-    {
-        "delivery_date": "2021-12-03",
-        "amf_fl": 20,
-        "amk_kl": 30,
-        "allocated": 20,
-        "total": 50,
-        "orders": [
-            {
-                "order_id": "104",
-                "amf_fl": 20,
-                "amk_kl": 30,
-                "allocated": 20,
-                "total": 50,
-                "status": 3,
-                "accepted_by": "shruti"
-            }
-        ]
-    },
-    {
-        "delivery_date": "2021-12-04",
-        "amf_fl": 20,
-        "amk_kl": 30,
-        "allocated": 20,
-        "total": 50,
-        "orders": [
-            {
-                "order_id": "104",
-                "amf_fl": 20,
-                "amk_kl": 30,
-                "allocated": 20,
-                "total": 50,
-                "status": 3,
-                "accepted_by": "shruti"
-            }
-        ]
-    }
+               {
+                              "delivery_date": "2021-12-02",
+                              "amf_fl": 10,
+                              "amk_kl": 50,
+                              "allocated": null,
+                              "total": 60,
+                              "orders": [
+                                             {
+                                                            "order_id": "102",
+                                                            "amf_fl": 10,
+                                                            "amk_kl": 50,
+                                                            "allocated": null,
+                                                            "total": 60,
+                                                            "status": 3,
+                                                            "accepted_by": "swati"
+                                             },
+                                             {
+                                                            "order_id": "103",
+                                                            "amf_fl": 10,
+                                                            "amk_kl": 50,
+                                                            "allocated": null,
+                                                            "total": 60,
+                                                            "status": 1,
+                                                            "accepted_by": "swati"
+                                             },
+                                             {
+                                                            "order_id": "104",
+                                                            "amf_fl": 10,
+                                                            "amk_kl": 50,
+                                                            "allocated": null,
+                                                            "total": 60,
+                                                            "status": 2,
+                                                            "accepted_by": "swati"
+                                             },
+                                             {
+                                                            "order_id": "105",
+                                                            "amf_fl": 10,
+                                                            "amk_kl": 50,
+                                                            "allocated": null,
+                                                            "total": 60,
+                                                            "status": 4,
+                                                            "accepted_by": "swati"
+                                             },
+                                             {
+                                                            "order_id": "106",
+                                                            "amf_fl": 10,
+                                                            "amk_kl": 50,
+                                                            "allocated": null,
+                                                            "total": 60,
+                                                            "status": 5,
+                                                            "accepted_by": "swati"
+                                             }
+                                             
+                              ]
+               },
+               {
+                              "delivery_date": "2021-12-03",
+                              "amf_fl": 20,
+                              "amk_kl": 30,
+                              "allocated": 20,
+                              "total": 50,
+                              "orders": [
+                                             {
+                                                            "order_id": "107",
+                                                            "amf_fl": 20,
+                                                            "amk_kl": 30,
+                                                            "allocated": 20,
+                                                            "total": 50,
+                                                            "status": 3,
+                                                            "accepted_by": "shruti"
+                                             }
+                              ]
+               },
+               {
+                              "delivery_date": "2021-12-04",
+                              "amf_fl": 20,
+                              "amk_kl": 30,
+                              "allocated": 20,
+                              "total": 50,
+                              "orders": [
+                                             {
+                                                            "order_id": "108",
+                                                            "amf_fl": 20,
+                                                            "amk_kl": 30,
+                                                            "allocated": 20,
+                                                            "total": 50,
+                                                            "status": 1,
+                                                            "accepted_by": "shruti"
+                                             }
+                              ]
+               }
 ]
+
