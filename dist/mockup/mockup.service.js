@@ -43,11 +43,16 @@ let MockupService = class MockupService {
     }
     updateModule(req) {
         var responseModel;
-        if (req.userId === "Sunny@pretboh.onmicrosoft.com") {
-            responseModel = new statusresponsemodel_1.StatusResponseModel('User entered into order Module', 'USER_IN_ORDER_PAGE');
+        if (req.module === "order") {
+            if (req.userId === "Sunny@pretboh.onmicrosoft.com") {
+                responseModel = new statusresponsemodel_1.StatusResponseModel('User entered into order Module', 'USER_IN_ORDER_PAGE');
+            }
+            else {
+                responseModel = new statusresponsemodel_1.StatusResponseModel('Gobi@pretboh.com already in order Module', 'ORDER_PAGE_ALREADY_IN_USE');
+            }
         }
         else {
-            responseModel = new statusresponsemodel_1.StatusResponseModel('Gobi@pretboh.com already in order Module', 'ORDER_PAGE_ALREADY_IN_USE');
+            responseModel = new statusresponsemodel_1.StatusResponseModel('User logout from  order Module', 'USER_LOGOUT_ORDER_PAGE');
         }
         return responseModel;
     }

@@ -50,13 +50,22 @@ export class MockupService {
 
       var responseModel : StatusResponseModel
 
+      if (req.module ===  "order"){
+ 
       if(req.userId=== "Sunny@pretboh.onmicrosoft.com"){
 
-      responseModel = new StatusResponseModel ('User entered into order Module','USER_IN_ORDER_PAGE')}
+      responseModel = new StatusResponseModel ('User entered into order Module','USER_IN_ORDER_PAGE')
+      }
       else {
 
-        responseModel = new StatusResponseModel ('Gobi@pretboh.com already in order Module','ORDER_PAGE_ALREADY_IN_USE')}
+        responseModel = new StatusResponseModel ('Gobi@pretboh.com already in order Module','ORDER_PAGE_ALREADY_IN_USE')
+      }
+      }
+      else {
 
+        responseModel = new StatusResponseModel ('User logout from  order Module','USER_LOGOUT_ORDER_PAGE')
+      }
+      
       return responseModel
     }
 
