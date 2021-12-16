@@ -52,7 +52,7 @@ return this.mockupService.getAllItems(shop_id)
 return this.mockupService.getShopInfo(shop_id)
     }
 
-    @Put('employee/moduletracking')
+    @Put('user/moduletracking')
     updateModule(@Body()req:ModuleRequestModel){
         console.log('update status create##',req)
          return this.mockupService.updateModule(req)
