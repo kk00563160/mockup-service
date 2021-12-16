@@ -1,0 +1,11 @@
+{
+    "shop_id" : 102,
+    "curreny" : "dollar",
+    "banking_date": "2021-12-15",
+    "workingdays": [1,1,1,1,1,1,1],
+    "deliverydays": [0,0,1,0,1,0,1],
+    "orderdays": [1,0,1,0,1,0,0]
+    }
+    
+
+   

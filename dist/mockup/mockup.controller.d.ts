@@ -1,6 +1,7 @@
 import { LogoutStatus, MockupLogoutModel } from './mockup.logoutmodel';
 import { MockupModel, LoginResponseModel } from './mockup.model';
 import { MockupService } from './mockup.service';
+import { ModuleRequestModel } from './model/modulerequestmodel';
 import { StatusRequestModel } from './model/statusrequestmodel';
 export declare class MockupController {
     private mockupService;
@@ -60,4 +61,13 @@ export declare class MockupController {
             }[];
         }[];
     };
+    getShopInfo(shop_id: number): {
+        shop_id: number;
+        curreny: string;
+        banking_date: string;
+        workingdays: number[];
+        deliverydays: number[];
+        orderdays: number[];
+    };
+    updateModule(req: ModuleRequestModel): import("./model/statusresponsemodel").StatusResponseModel;
 }

@@ -13,6 +13,7 @@ const logoutresponsemodel = require("./json/logoutresponsemodel.json");
 const orderlistmodel = require("./json/orderlistmodel.json");
 const statusresponsemodel_1 = require("./model/statusresponsemodel");
 const itemlistmodel = require("./json/itemlistmodel.json");
+const shopinfomodel = require("./json/shopinfomodel.json");
 let MockupService = class MockupService {
     constructor() {
         this.mockup = [];
@@ -40,6 +41,16 @@ let MockupService = class MockupService {
         }
         return ResModel;
     }
+    updateModule(req) {
+        var responseModel;
+        if (req.userId === "Sunny@pretboh.onmicrosoft.com") {
+            responseModel = new statusresponsemodel_1.StatusResponseModel('User entered into order Module', 'USER_IN_ORDER_PAGE');
+        }
+        else {
+            responseModel = new statusresponsemodel_1.StatusResponseModel('Gobi@pretboh.com already in order Module', 'ORDER_PAGE_ALREADY_IN_USE');
+        }
+        return responseModel;
+    }
     createMockup(mockUpModel) {
         return loginresponsemodel;
     }
@@ -51,6 +62,9 @@ let MockupService = class MockupService {
         var orderdate = new Date();
         console.log(orderdate);
         return itemlistmodel;
+    }
+    getShopInfo(shop_id) {
+        return shopinfomodel;
     }
 };
 MockupService = __decorate([

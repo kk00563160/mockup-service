@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const mockup_logoutmodel_1 = require("./mockup.logoutmodel");
 const mockup_model_1 = require("./mockup.model");
 const mockup_service_1 = require("./mockup.service");
+const modulerequestmodel_1 = require("./model/modulerequestmodel");
 const statusrequestmodel_1 = require("./model/statusrequestmodel");
 let MockupController = class MockupController {
     constructor(mockupService) {
@@ -43,6 +44,14 @@ let MockupController = class MockupController {
         console.log('get all items for shopid ', shop_id);
         return this.mockupService.getAllItems(shop_id);
     }
+    getShopInfo(shop_id) {
+        console.log('get all items for shopid ', shop_id);
+        return this.mockupService.getShopInfo(shop_id);
+    }
+    updateModule(req) {
+        console.log('update status create##', req);
+        return this.mockupService.updateModule(req);
+    }
 };
 __decorate([
     (0, common_1.Get)(),
@@ -65,7 +74,7 @@ __decorate([
     __metadata("design:returntype", mockup_logoutmodel_1.LogoutStatus)
 ], MockupController.prototype, "logoutMockup", null);
 __decorate([
-    (0, common_1.Get)('/orders/:shop_id/:banking_date'),
+    (0, common_1.Get)('order/orderlist/:shop_id/:banking_date'),
     __param(0, (0, common_1.Param)('shop_id')),
     __param(1, (0, common_1.Param)('banking_date')),
     __metadata("design:type", Function),
@@ -73,19 +82,33 @@ __decorate([
     __metadata("design:returntype", Object)
 ], MockupController.prototype, "getOrderList", null);
 __decorate([
-    (0, common_1.Put)('orders/status'),
+    (0, common_1.Put)('order/statusupdate'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [statusrequestmodel_1.StatusRequestModel]),
     __metadata("design:returntype", void 0)
 ], MockupController.prototype, "updateStatus", null);
 __decorate([
-    (0, common_1.Get)('/goods/:shop_id'),
+    (0, common_1.Get)('/goods/goodslist/:shop_id'),
     __param(0, (0, common_1.Param)('shop_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], MockupController.prototype, "getItems", null);
+__decorate([
+    (0, common_1.Get)('shop/shopinfo/:shop_id'),
+    __param(0, (0, common_1.Param)('shop_id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], MockupController.prototype, "getShopInfo", null);
+__decorate([
+    (0, common_1.Put)('employee/moduletracking'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [modulerequestmodel_1.ModuleRequestModel]),
+    __metadata("design:returntype", void 0)
+], MockupController.prototype, "updateModule", null);
 MockupController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [mockup_service_1.MockupService])

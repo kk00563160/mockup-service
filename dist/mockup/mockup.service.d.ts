@@ -1,11 +1,14 @@
 import { LogoutStatus, MockupLogoutModel } from './mockup.logoutmodel';
 import { MockupModel, LoginResponseModel } from './mockup.model';
+import { StatusResponseModel } from './model/statusresponsemodel';
+import { ModuleRequestModel } from './model/modulerequestmodel';
 export declare class MockupService {
     private mockup;
     private usertrack;
     getAllMock(): MockupModel[];
     getOrderListByShopidAndBankingDate(): any;
     updateOrderStatus(responseObject: any): any;
+    updateModule(req: ModuleRequestModel): StatusResponseModel;
     createMockup(mockUpModel: MockupModel): LoginResponseModel;
     logoutMockup(mockupLogoutModel: MockupLogoutModel): LogoutStatus;
     getAllItems(shop_id: number): {
@@ -57,5 +60,13 @@ export declare class MockupService {
                 };
             }[];
         }[];
+    };
+    getShopInfo(shop_id: number): {
+        shop_id: number;
+        curreny: string;
+        banking_date: string;
+        workingdays: number[];
+        deliverydays: number[];
+        orderdays: number[];
     };
 }

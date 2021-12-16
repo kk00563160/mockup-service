@@ -6,7 +6,9 @@ import * as loginresponsemodel from "./json/loginresponsemodel.json";
 import * as logoutresponsemodel from "./json/logoutresponsemodel.json"
 import * as orderlistmodel from "./json/orderlistmodel.json"
 import { StatusResponseModel } from './model/statusresponsemodel';
-import * as itemlistmodel from "./json/itemlistmodel.json"
+import * as itemlistmodel from "./json/itemlistmodel.json";
+import * as shopinfomodel from "./json/shopinfomodel.json";
+import { ModuleRequestModel } from './model/modulerequestmodel';
 
 @Injectable()
 export class MockupService {
@@ -40,7 +42,21 @@ export class MockupService {
             ResModel = new StatusResponseModel('Order Accepted','ACCEPTED')
            }
 
-return ResModel;
+          return ResModel;
+    }
+
+    updateModule(req :ModuleRequestModel){
+
+      var responseModel : StatusResponseModel
+
+      if(req.userId=== "Sunny@pretboh.onmicrosoft.com"){
+
+      responseModel = new StatusResponseModel ('User entered into order Module','USER_IN_ORDER_PAGE')}
+      else {
+
+        responseModel = new StatusResponseModel ('Gobi@pretboh.com already in order Module','ORDER_PAGE_ALREADY_IN_USE')}
+
+      return responseModel
     }
 
     createMockup(mockUpModel:MockupModel): LoginResponseModel {
@@ -62,4 +78,11 @@ console.log(logoutresponsemodel)
     console.log(orderdate)
     return itemlistmodel;
     }
+
+    getShopInfo(shop_id : number){
+
+      return shopinfomodel;
+
+    }
+
 }
