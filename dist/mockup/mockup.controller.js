@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const mockup_logoutmodel_1 = require("./mockup.logoutmodel");
 const mockup_model_1 = require("./mockup.model");
 const mockup_service_1 = require("./mockup.service");
+const createorderrequestmodel_1 = require("./model/createorderrequestmodel");
 const modulerequestmodel_1 = require("./model/modulerequestmodel");
 const statusrequestmodel_1 = require("./model/statusrequestmodel");
 let MockupController = class MockupController {
@@ -51,6 +52,9 @@ let MockupController = class MockupController {
     updateModule(req) {
         console.log('update status create##', req);
         return this.mockupService.updateModule(req);
+    }
+    createOrder(req) {
+        return this.mockupService.createOrder(req);
     }
 };
 __decorate([
@@ -109,6 +113,13 @@ __decorate([
     __metadata("design:paramtypes", [modulerequestmodel_1.ModuleRequestModel]),
     __metadata("design:returntype", void 0)
 ], MockupController.prototype, "updateModule", null);
+__decorate([
+    (0, common_1.Post)('order/create'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [createorderrequestmodel_1.CreateOrderRequestModel]),
+    __metadata("design:returntype", void 0)
+], MockupController.prototype, "createOrder", null);
 MockupController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [mockup_service_1.MockupService])

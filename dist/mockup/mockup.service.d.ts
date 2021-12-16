@@ -2,6 +2,7 @@ import { LogoutStatus, MockupLogoutModel } from './mockup.logoutmodel';
 import { MockupModel, LoginResponseModel } from './mockup.model';
 import { StatusResponseModel } from './model/statusresponsemodel';
 import { ModuleRequestModel } from './model/modulerequestmodel';
+import { CreateOrderRequestModel } from './model/createorderrequestmodel';
 export declare class MockupService {
     private mockup;
     private usertrack;
@@ -9,6 +10,7 @@ export declare class MockupService {
     getOrderListByShopidAndBankingDate(): any;
     updateOrderStatus(responseObject: any): any;
     updateModule(req: ModuleRequestModel): StatusResponseModel;
+    createOrder(req: CreateOrderRequestModel): StatusResponseModel;
     createMockup(mockUpModel: MockupModel): LoginResponseModel;
     logoutMockup(mockupLogoutModel: MockupLogoutModel): LogoutStatus;
     getAllItems(shop_id: number): {

@@ -4,6 +4,7 @@ import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { LogoutStatus, MockupLogoutModel } from './mockup.logoutmodel';
 import { MockupModel, LoginResponseModel } from './mockup.model';
 import { MockupService } from './mockup.service';
+import { CreateOrderRequestModel } from './model/createorderrequestmodel';
 import { ModuleRequestModel } from './model/modulerequestmodel';
 import { StatusRequestModel } from './model/statusrequestmodel';
 
@@ -55,6 +56,13 @@ return this.mockupService.getShopInfo(shop_id)
     updateModule(@Body()req:ModuleRequestModel){
         console.log('update status create##',req)
          return this.mockupService.updateModule(req)
+    }
+
+    @Post('order/create')
+    createOrder(@Body() req : CreateOrderRequestModel){
+
+        return this.mockupService.createOrder(req)
+
     }
 
     }

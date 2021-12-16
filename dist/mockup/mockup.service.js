@@ -51,6 +51,10 @@ let MockupService = class MockupService {
         }
         return responseModel;
     }
+    createOrder(req) {
+        var responseModel = new statusresponsemodel_1.StatusResponseModel('BFL-001-001 order created ', 'ORDER_CREATED');
+        return responseModel;
+    }
     createMockup(mockUpModel) {
         return loginresponsemodel;
     }

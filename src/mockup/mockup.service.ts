@@ -9,6 +9,7 @@ import { StatusResponseModel } from './model/statusresponsemodel';
 import * as itemlistmodel from "./json/itemlistmodel.json";
 import * as shopinfomodel from "./json/shopinfomodel.json";
 import { ModuleRequestModel } from './model/modulerequestmodel';
+import { CreateOrderRequestModel } from './model/createorderrequestmodel';
 
 @Injectable()
 export class MockupService {
@@ -57,6 +58,13 @@ export class MockupService {
         responseModel = new StatusResponseModel ('Gobi@pretboh.com already in order Module','ORDER_PAGE_ALREADY_IN_USE')}
 
       return responseModel
+    }
+
+    createOrder(req : CreateOrderRequestModel): StatusResponseModel{
+
+      var  responseModel : StatusResponseModel  = new StatusResponseModel ('BFL-001-001 order created ','ORDER_CREATED')
+
+      return responseModel;
     }
 
     createMockup(mockUpModel:MockupModel): LoginResponseModel {

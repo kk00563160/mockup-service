@@ -1,6 +1,7 @@
 import { LogoutStatus, MockupLogoutModel } from './mockup.logoutmodel';
 import { MockupModel, LoginResponseModel } from './mockup.model';
 import { MockupService } from './mockup.service';
+import { CreateOrderRequestModel } from './model/createorderrequestmodel';
 import { ModuleRequestModel } from './model/modulerequestmodel';
 import { StatusRequestModel } from './model/statusrequestmodel';
 export declare class MockupController {
@@ -70,4 +71,5 @@ export declare class MockupController {
         orderdays: number[];
     };
     updateModule(req: ModuleRequestModel): import("./model/statusresponsemodel").StatusResponseModel;
+    createOrder(req: CreateOrderRequestModel): import("./model/statusresponsemodel").StatusResponseModel;
 }
