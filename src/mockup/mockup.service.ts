@@ -10,6 +10,7 @@ import * as itemlistmodel from "./json/itemlistmodel.json";
 import * as shopinfomodel from "./json/shopinfomodel.json";
 import { ModuleRequestModel } from './model/modulerequestmodel';
 import { CreateOrderRequestModel } from './model/createorderrequestmodel';
+import * as orderdetailsmodel from "./json/orderdetailsmodel.json"
 
 @Injectable()
 export class MockupService {
@@ -100,6 +101,11 @@ console.log(logoutresponsemodel)
 
       return shopinfomodel;
 
+    }
+
+    getOrder():any{
+
+      return orderdetailsmodel;
     }
 
 }

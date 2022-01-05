@@ -1,0 +1,47 @@
+{
+    "order_id": "BFL-87-1428",
+    "supplier_id": 4,
+    "status_id": 1,
+    "ordered_by": "Karthik",
+    "creation_date": "2022-01-03T08:02:56.204Z",
+    "amf_fl": 453,
+    "amk_kl": 105,
+    "shop_id": 87,
+    "total": 558,
+    "delivery_date": "2022-01-05T08:02:56.205Z",
+    "items": [
+        {
+            "id": 699,
+            "order_id": "BFL-87-1428",
+            "item_id": "11",
+            "qty": "10",
+            "pack_price": 10.5,
+            "ordered_by": "Karthik",
+            "status_id": 1,
+            "ordered_role": "KL",
+            "units": "5KG"
+        },
+        {
+            "id": 700,
+            "order_id": "BFL-87-1428",
+            "item_id": "12",
+            "qty": "15",
+            "pack_price": 10.2,
+            "ordered_by": "Karthik",
+            "status_id": 1,
+            "ordered_role": "FL",
+            "units": "10KG"
+        },
+        {
+            "id": 701,
+            "order_id": "BFL-87-1428",
+            "item_id": "13",
+            "qty": "15",
+            "pack_price": 20,
+            "ordered_by": "Karthik",
+            "status_id": 1,
+            "ordered_role": "FL",
+            "units": "2KG"
+        }
+    ]
+}
