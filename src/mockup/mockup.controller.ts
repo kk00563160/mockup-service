@@ -65,7 +65,7 @@ return this.mockupService.getShopInfo(shop_id)
 
     }
 
-    @Get('/order/:id')
+    @Get('/order/orderinfo/:id')
     getOrder(@Param('id') id :string):any{
         console.log('get order for id ',id)
         return this.mockupService.getOrder();
