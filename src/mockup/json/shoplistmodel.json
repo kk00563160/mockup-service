@@ -1,0 +1,22 @@
+{
+    "shops":[
+    {
+    "shop_code":"272",
+    "shop_name":"Kentish Town",
+    "manager_name":"Shesh",
+    "manager_email":"seshagiri.kamalakaran@techmahindra.com"
+    },
+    {
+    "shop_code":"425",
+    "shop_name":"Wood Green",
+    "manager_name":"Seshagiri",
+    "manager_email":"seshagiri.kamalakaran@techmahindra.com"
+    },
+    {
+    "shop_code":"510",
+    "shop_name":"Finchley Road",
+    "manager_name":"Rajaganesh Narayanaswamy",
+    "manager_email":"seshagiri.kamalakaran@techmahindra.com"
+    }
+    ]
+    }

@@ -11,6 +11,7 @@ import * as shopinfomodel from "./json/shopinfomodel.json";
 import { ModuleRequestModel } from './model/modulerequestmodel';
 import { CreateOrderRequestModel } from './model/createorderrequestmodel';
 import * as orderdetailsmodel from "./json/orderdetailsmodel.json"
+import * as shoplistmodel from "./json/shoplistmodel.json"
 
 @Injectable()
 export class MockupService {
@@ -106,6 +107,11 @@ console.log(logoutresponsemodel)
     getOrder():any{
 
       return orderdetailsmodel;
+    }
+
+    getShopList():any{
+
+      return shoplistmodel;
     }
 
 }

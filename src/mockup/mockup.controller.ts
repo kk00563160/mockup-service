@@ -71,5 +71,11 @@ return this.mockupService.getShopInfo(shop_id)
         return this.mockupService.getOrder();
     }
 
+    @Get('/shop/shoplist')
+    getShopList():any{
+        console.log('get shoplist')
+        return this.mockupService.getShopList;
+    }
+
     }
 
