@@ -10,13 +10,19 @@
     "shop_code":"425",
     "shop_name":"Wood Green",
     "manager_name":"Seshagiri Kamalakaran",
-    "manager_email":"karthikiniyank@gmail.com"
+    "manager_email":"monishamaya@gmail.com"
     },
     {
     "shop_code":"510",
     "shop_name":"Finchley Road",
     "manager_name":"Rajaganesh Narayanaswamy",
-    "manager_email":"karthikiniyank@gmail.com"
+    "manager_email":"monishamaya@gmail.com"
+    },
+    {
+    "shop_code":"607",
+    "shop_name":"Clapham Common",
+    "manager_name":"Monisa",
+    "manager_email":"monishamaya@gmail.com"
     }
     ]
     }
