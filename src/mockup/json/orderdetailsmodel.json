@@ -1,23 +1,23 @@
 {
-    "order_id": "BFL-68-1774",
+    "order_id": "BFL-48-1778",
     "supplier_id": 4,
-    "status_id": 1,
+    "status_id": 3,
     "ordered_by": "swati",
     "accepted_by": null,
     "order_type": "Additional",
-    "creation_date": "2022-03-08T08:31:22.793Z",
+    "creation_date": "2022-03-09T08:27:38.428Z",
     "cancelled_date": null,
     "amf_fl": "450.00",
     "amk_kl": "800.00",
-    "shop_id": 103,
+    "shop_id": 48,
     "allocated": null,
     "total": "1250.00",
-    "delivery_date": "2022-03-10",
+    "delivery_date": "2022-03-11",
     "accepted_date": null,
     "items": [
         {
-            "id": 2072,
-            "order_id": "BFL-68-1774",
+            "id": 2099,
+            "order_id": "BFL-48-1778",
             "item_id": 11,
             "qty": 8,
             "pack_price": "100.00",
@@ -29,8 +29,8 @@
             "units": null
         },
         {
-            "id": 2073,
-            "order_id": "BFL-68-1774",
+            "id": 2100,
+            "order_id": "BFL-48-1778",
             "item_id": 12,
             "qty": 15,
             "pack_price": "10.00",
@@ -42,8 +42,8 @@
             "units": null
         },
         {
-            "id": 2074,
-            "order_id": "BFL-68-1774",
+            "id": 2101,
+            "order_id": "BFL-48-1778",
             "item_id": 13,
             "qty": 15,
             "pack_price": "20.00",

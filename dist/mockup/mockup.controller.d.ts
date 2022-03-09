@@ -77,6 +77,7 @@ export declare class MockupController {
         status_id: number;
         ordered_by: string;
         order_type: string;
+        creation_date: string;
         amf_fl: number;
         amk_kl: number;
         shop_id: number;
