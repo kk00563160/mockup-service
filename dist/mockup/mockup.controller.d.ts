@@ -71,5 +71,29 @@ export declare class MockupController {
         orderdays: number[];
     };
     updateModule(req: ModuleRequestModel): import("./model/statusresponsemodel").StatusResponseModel;
-    createOrder(req: CreateOrderRequestModel): import("./model/statusresponsemodel").StatusResponseModel;
+    createOrder(req: CreateOrderRequestModel): {
+        order_id: string;
+        supplier_id: number;
+        status_id: number;
+        ordered_by: string;
+        order_type: string;
+        amf_fl: number;
+        amk_kl: number;
+        shop_id: number;
+        total: number;
+        delivery_date: string;
+        items: {
+            id: number;
+            order_id: string;
+            item_id: string;
+            qty: string;
+            pack_price: number;
+            ordered_by: string;
+            status_id: number;
+            ordered_role: string;
+        }[];
+    } | import("./model/statusresponsemodel").StatusResponseModel;
+    getOrder(id: string): any;
+    getShopList(): any;
+    getGoods(shop_id: number): any;
 }

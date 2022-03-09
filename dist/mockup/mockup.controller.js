@@ -56,6 +56,18 @@ let MockupController = class MockupController {
     createOrder(req) {
         return this.mockupService.createOrder(req);
     }
+    getOrder(id) {
+        console.log('get order for id ', id);
+        return this.mockupService.getOrder();
+    }
+    getShopList() {
+        console.log('get shoplist');
+        return this.mockupService.getShopList();
+    }
+    getGoods(shop_id) {
+        console.log('get all goods for shopid ', shop_id);
+        return this.mockupService.getGoodsAdditional(shop_id);
+    }
 };
 __decorate([
     (0, common_1.Get)(),
@@ -107,7 +119,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], MockupController.prototype, "getShopInfo", null);
 __decorate([
-    (0, common_1.Put)('employee/moduletracking'),
+    (0, common_1.Put)('user/moduletracking'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [modulerequestmodel_1.ModuleRequestModel]),
@@ -120,6 +132,26 @@ __decorate([
     __metadata("design:paramtypes", [createorderrequestmodel_1.CreateOrderRequestModel]),
     __metadata("design:returntype", void 0)
 ], MockupController.prototype, "createOrder", null);
+__decorate([
+    (0, common_1.Get)('/order/orderinfo/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Object)
+], MockupController.prototype, "getOrder", null);
+__decorate([
+    (0, common_1.Get)('/shop/orderremainder'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], MockupController.prototype, "getShopList", null);
+__decorate([
+    (0, common_1.Get)('/goods/additionalorder/:shop_id'),
+    __param(0, (0, common_1.Param)('shop_id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", void 0)
+], MockupController.prototype, "getGoods", null);
 MockupController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [mockup_service_1.MockupService])

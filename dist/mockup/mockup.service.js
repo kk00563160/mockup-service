@@ -14,6 +14,10 @@ const orderlistmodel = require("./json/orderlistmodel.json");
 const statusresponsemodel_1 = require("./model/statusresponsemodel");
 const itemlistmodel = require("./json/itemlistmodel.json");
 const shopinfomodel = require("./json/shopinfomodel.json");
+const orderdetailsmodel = require("./json/orderdetailsmodel.json");
+const shoplistmodel = require("./json/shoplistmodel.json");
+const goodsadditionalordermodel = require("./json/goodsadditionalordermodel.json");
+const createadditinalordermodel = require("./json/createadditionalordermodel.json");
 let MockupService = class MockupService {
     constructor() {
         this.mockup = [];
@@ -57,6 +61,9 @@ let MockupService = class MockupService {
         return responseModel;
     }
     createOrder(req) {
+        if (req.order_type === "Additional") {
+            return createadditinalordermodel;
+        }
         var responseModel = new statusresponsemodel_1.StatusResponseModel('BFL-001-001 order created ', 'ORDER_CREATED');
         return responseModel;
     }
@@ -74,6 +81,15 @@ let MockupService = class MockupService {
     }
     getShopInfo(shop_id) {
         return shopinfomodel;
+    }
+    getOrder() {
+        return orderdetailsmodel;
+    }
+    getShopList() {
+        return shoplistmodel;
+    }
+    getGoodsAdditional(shop_id) {
+        return goodsadditionalordermodel;
     }
 };
 MockupService = __decorate([

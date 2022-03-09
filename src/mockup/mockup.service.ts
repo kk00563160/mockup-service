@@ -12,6 +12,9 @@ import { ModuleRequestModel } from './model/modulerequestmodel';
 import { CreateOrderRequestModel } from './model/createorderrequestmodel';
 import * as orderdetailsmodel from "./json/orderdetailsmodel.json"
 import * as shoplistmodel from "./json/shoplistmodel.json"
+import * as goodsadditionalordermodel from "./json/goodsadditionalordermodel.json"
+import * as createadditinalordermodel from "./json/createadditionalordermodel.json"
+
 
 @Injectable()
 export class MockupService {
@@ -71,9 +74,14 @@ export class MockupService {
       return responseModel
     }
 
-    createOrder(req : CreateOrderRequestModel): StatusResponseModel{
+    createOrder(req : CreateOrderRequestModel){
 
-      var  responseModel : StatusResponseModel  = new StatusResponseModel ('BFL-001-001 order created ','ORDER_CREATED')
+      
+
+      if(req.order_type === "Additional"){
+        return createadditinalordermodel
+     }
+    var  responseModel : StatusResponseModel  = new StatusResponseModel ('BFL-001-001 order created ','ORDER_CREATED')
 
       return responseModel;
     }
@@ -112,6 +120,10 @@ console.log(logoutresponsemodel)
     getShopList():any{
 
       return shoplistmodel;
+    }
+
+    getGoodsAdditional(shop_id : number):any{
+      return goodsadditionalordermodel
     }
 
 }

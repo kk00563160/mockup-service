@@ -77,5 +77,12 @@ return this.mockupService.getShopInfo(shop_id)
         return this.mockupService.getShopList();
     }
 
+
+    @Get('/goods/additionalorder/:shop_id')
+    getGoods(@Param('shop_id')shop_id : number){
+        console.log('get all goods for shopid ',shop_id)
+       return this.mockupService.getGoodsAdditional(shop_id)
+    }
+
     }
 

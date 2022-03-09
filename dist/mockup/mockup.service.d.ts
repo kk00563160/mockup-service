@@ -10,7 +10,28 @@ export declare class MockupService {
     getOrderListByShopidAndBankingDate(): any;
     updateOrderStatus(responseObject: any): any;
     updateModule(req: ModuleRequestModel): StatusResponseModel;
-    createOrder(req: CreateOrderRequestModel): StatusResponseModel;
+    createOrder(req: CreateOrderRequestModel): {
+        order_id: string;
+        supplier_id: number;
+        status_id: number;
+        ordered_by: string;
+        order_type: string;
+        amf_fl: number;
+        amk_kl: number;
+        shop_id: number;
+        total: number;
+        delivery_date: string;
+        items: {
+            id: number;
+            order_id: string;
+            item_id: string;
+            qty: string;
+            pack_price: number;
+            ordered_by: string;
+            status_id: number;
+            ordered_role: string;
+        }[];
+    } | StatusResponseModel;
     createMockup(mockUpModel: MockupModel): LoginResponseModel;
     logoutMockup(mockupLogoutModel: MockupLogoutModel): LogoutStatus;
     getAllItems(shop_id: number): {
@@ -71,4 +92,7 @@ export declare class MockupService {
         deliverydays: number[];
         orderdays: number[];
     };
+    getOrder(): any;
+    getShopList(): any;
+    getGoodsAdditional(shop_id: number): any;
 }

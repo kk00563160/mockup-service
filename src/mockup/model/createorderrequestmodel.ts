@@ -3,6 +3,7 @@ export class CreateOrderRequestModel{
 
     public shop_id : number
     public placed_by : string
+    public order_type: string
     public items : []
 
 }

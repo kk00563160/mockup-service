@@ -1,6 +1,7 @@
 export declare class CreateOrderRequestModel {
     shop_id: number;
     placed_by: string;
+    order_type: string;
     items: [];
 }
 export declare class Items {
